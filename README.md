@@ -1,0 +1,1 @@
+# NWN.Framework.Lite.Template
