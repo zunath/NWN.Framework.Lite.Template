@@ -12,6 +12,5 @@ services:
             - ${PWD-.}/logs:/nwn/run/logs.0
             - ${PWD-.}/:/nwn/home
             - ${PWD-.}/logs:/nwn/data/bin/linux-x86/logs.0
-            - ${PWD-.}/wait-for-it.sh:/usr/local/bin/wait-for-it.sh
         ports:
             - "5121:5121/udp"
