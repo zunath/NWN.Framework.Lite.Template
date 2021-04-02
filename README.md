@@ -2,6 +2,17 @@
 
 ## Docker Installation
 
+Download and install `Docker`. Instructions on installation is out of scope here with this repo.
+
+`Linux`
+<https://docs.docker.com/engine/install>
+
+`Mac`
+<https://docs.docker.com/docker-for-mac/install>
+
+`Windows`
+<https://docs.docker.com/docker-for-windows/install>
+
 Assuming you have Docker installed correctly then inside the `Docker` directory Copy/Move `docker-compose.yml` to your NWN Installation folder. For most Windows users the installation path will be something like this.
 
 ```sh
