@@ -33,16 +33,18 @@ and nwserver will spin up.
 
 ## Install Builder
 
-You can ignore the `How to Launch` section up to `docker-compose up` by using `Builder`. To install is simply 
-adding this folder to your solution directory. From there you will need to add this snippet to your `.csproj` file.
-```
+You can ignore the `How to Launch` section up to `docker-compose up` by using `Builder`. To install it simply add this folder to your solution directory. From there you will need to add this snippet to your `.csproj` file.
+
+```cs
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="$(SolutionDir)Builder\deployBuild.exe -b $(ProjectDir)$(OutDir)" />
   </Target>
-``` 
-After that runs your files will be added to `dotnet` folder. From there you `cd` to the directory that has `docker-compose.yml``
-and type
 ```
+
+Any time your project builds the binary files will be automatically copied to your `dotnet` folder. From there you `cd` to the directory that has `docker-compose.yml`` and type
+
+```sh
 docker-compose up
 ```
+
 and nwserver will spin up.
