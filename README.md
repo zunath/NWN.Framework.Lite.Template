@@ -31,12 +31,18 @@ docker-compose up
 
 and nwserver will spin up.
 
-## Install NWN.Python
+## Install Builder
 
-You can ignore the `How to Launch` section up to `docker-compose up` by using NWN.Python. To install is simply adding this folder to your solution directory.
-From there you will need to add this snippet to your `.csproj` file.
+You can ignore the `How to Launch` section up to `docker-compose up` by using `Builder`. To install is simply 
+adding this folder to your solution directory. From there you will need to add this snippet to your `.csproj` file.
 ```
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="$(SolutionDir)NWN.Python\deployBuild.exe -b $(ProjectDir)$(OutDir)" />
+    <Exec Command="$(SolutionDir)Builder\deployBuild.exe -b $(ProjectDir)$(OutDir)" />
   </Target>
 ``` 
+After that runs your files will be added to `dotnet` folder. From there you `cd` to the directory that has `docker-compose.yml``
+and type
+```
+docker-compose up
+```
+and nwserver will spin up.
