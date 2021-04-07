@@ -30,3 +30,13 @@ docker-compose up
 ```
 
 and nwserver will spin up.
+
+## Install NWN.Python
+
+You can ignore the `How to Launch` section up to `docker-compose up` by using NWN.Python. To install is simply adding this folder to your solution directory.
+From there you will need to add this snippet to your `.csproj` file.
+```
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="$(SolutionDir)NWN.Python\deployBuild.exe -b $(ProjectDir)$(OutDir)" />
+  </Target>
+``` 
